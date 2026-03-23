@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sachin Kashyap Fruit Juice Corner – Meerut</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--green:#2E7D32;--gm:#388E3C;--gl:#66BB6A;--lime:#AEEA00;--ls:#DCEDC8;--or:#F57C00;--ol:#FFB300;--pink:#E91E63;--red:#D32F2F;--cream:#FFFDE7;--white:#FFFFFF;--dark:#1B2A1C;--text:#2C3E2D;--tm:#4A6741;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Baloo 2',cursive;background:var(--cream);color:var(--text);overflow-x:hidden;}
+.bubbles-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.bubble{position:absolute;border-radius:50%;opacity:.07;animation:rise linear infinite;}
+@keyframes rise{0%{transform:translateY(110vh);opacity:0;}10%{opacity:.07;}90%{opacity:.07;}100%{transform:translateY(-10vh);opacity:0;}}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(27,42,28,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:62px;border-bottom:2px solid var(--gl);}
+.nl{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--lime);}
+.nl span{color:var(--ol);}
+.nls{display:flex;gap:1.8rem;list-style:none;}
+.nls a{text-decoration:none;color:#cde8cd;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:color .3s;}
+.nls a:hover{color:var(--lime);}
+.hero{min-height:100vh;background:linear-gradient(145deg,#0d2b0e,#1B5E20 35%,#2E7D32 65%,#1a4a00);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:62px;}
+.splat{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;animation:sf 6s ease-in-out infinite alternate;}
+.s1{width:500px;height:500px;background:#FF6F00;top:-150px;left:-100px;}
+.s2{width:400px;height:400px;background:#E91E63;bottom:-100px;right:-80px;animation-delay:2s;}
+.s3{width:300px;height:300px;background:#AEEA00;top:40%;right:15%;animation-delay:3.5s;}
+.s4{width:250px;height:250px;background:#00BCD4;bottom:20%;left:10%;animation-delay:1.5s;}
+@keyframes sf{from{transform:scale(1);}to{transform:scale(1.15) translate(20px,-15px);}}
+.ff{position:absolute;animation:fspin linear infinite;opacity:.14;pointer-events:none;}
+@keyframes fspin{0%{transform:translateY(0) rotate(0);}50%{transform:translateY(-20px) rotate(180deg);}100%{transform:translateY(0) rotate(360deg);}}
+.hc{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px;}
+.hbadge{display:inline-block;background:rgba(174,234,0,.15);border:1px solid var(--lime);color:var(--lime);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:6px 20px;border-radius:100px;margin-bottom:1.4rem;animation:fu 1s .1s both;}
+.hicon{font-size:clamp(4rem,10vw,7rem);display:block;margin-bottom:.2em;animation:fu 1s .2s both,ib 2.5s 1.5s ease-in-out infinite;}
+@keyframes ib{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-15px) rotate(5deg);}}
+.htitle{font-family:'Fredoka One',cursive;font-size:clamp(2.8rem,9vw,6rem);color:#fff;line-height:1.05;margin-bottom:.15em;animation:fu 1s .35s both;text-shadow:0 4px 30px rgba(0,0,0,.4);}
+.htitle .g{color:var(--lime);}
+.htitle .o{color:var(--ol);}
+.htag{font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(1rem,2.5vw,1.35rem);color:rgba(255,255,255,.8);margin-bottom:.5rem;animation:fu 1s .5s both;}
+.hsub{font-size:clamp(.82rem,2vw,1rem);color:rgba(255,255,255,.6);margin-bottom:2rem;animation:fu 1s .6s both;}
+.hpills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:2.5rem;animation:fu 1s .75s both;}
+.pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;padding:7px 16px;border-radius:100px;font-size:.8rem;font-weight:600;}
+.pill.best{background:rgba(255,179,0,.25);border-color:var(--ol);color:var(--ol);}
+.pill.hot{background:rgba(229,57,53,.3);border-color:#ef9a9a;}
+.hbtns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;animation:fu 1s .9s both;}
+@keyframes fu{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:13px 28px;border-radius:100px;font-family:'Baloo 2',cursive;font-size:.9rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.btn:hover{transform:translateY(-3px);}
+.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 8px 25px rgba(37,211,102,.4);}
+.btn-call{background:linear-gradient(135deg,var(--or),var(--red));color:#fff;box-shadow:0 8px 25px rgba(245,124,0,.4);}
+.btn-menu{background:linear-gradient(135deg,var(--green),var(--gl));color:#fff;box-shadow:0 8px 25px rgba(46,125,50,.4);}
+.dstrip{background:linear-gradient(90deg,var(--green),#1B5E20,var(--gm));color:#fff;text-align:center;padding:14px 5%;font-size:.88rem;font-weight:600;letter-spacing:.05em;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:1;}
+.dstrip span{display:flex;align-items:center;gap:.4rem;}
+section{padding:90px 5%;position:relative;z-index:1;}
+.slabel{display:block;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gm);font-weight:700;margin-bottom:.5rem;}
+.stitle{font-family:'Fredoka One',cursive;font-size:clamp(2rem,5vw,3.2rem);color:var(--dark);line-height:1.1;margin-bottom:.8rem;}
+.divider{width:50px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--green),var(--lime));margin:.7rem 0 2rem;}
+.divider.c{margin:.7rem auto 2rem;}
+.photos-section{background:var(--dark);padding:70px 5%;}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1100px;margin:0 auto;}
+.pcard{border-radius:16px;overflow:hidden;aspect-ratio:1/1;position:relative;cursor:pointer;transition:transform .3s,box-shadow .3s;}
+.pcard:hover{transform:scale(1.04);box-shadow:0 20px 50px rgba(0,0,0,.5);}
+.pcard:first-child{grid-column:span 2;aspect-ratio:2/1;}
+.pinner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;}
+.pfruit{font-size:clamp(3rem,6vw,6rem);animation:fspin 4s ease-in-out infinite;}
+.plabel{color:#fff;font-family:'Fredoka One',cursive;font-size:1rem;background:rgba(0,0,0,.35);padding:6px 16px;border-radius:100px;}
+.ph1{background:linear-gradient(145deg,#FF6F00,#FFD740,#FF8A65);}
+.ph2{background:linear-gradient(145deg,#1B5E20,#66BB6A,#AEEA00);}
+.ph3{background:linear-gradient(145deg,#880E4F,#E91E63,#FF80AB);}
+.ph4{background:linear-gradient(145deg,#004D40,#00897B,#80CBC4);}
+.ph5{background:linear-gradient(145deg,#E65100,#FF7043,#FFAB40);}
+.ph6{background:linear-gradient(145deg,#1A237E,#3949AB,#90CAF9);}
+.ph7{background:linear-gradient(145deg,#33691E,#8BC34A,#F9A825);}
+.menu-section{background:var(--white);}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.8rem;max-width:1150px;margin:0 auto;}
+.mcard{background:var(--cream);border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(46,125,50,.18);transition:transform .3s,box-shadow .3s;position:relative;}
+.mcard:hover{transform:translateY(-10px) rotate(-.5deg);box-shadow:0 20px 50px rgba(46,125,50,.2);}
+.bbest{position:absolute;top:14px;right:14px;background:var(--or);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;box-shadow:0 4px 12px rgba(245,124,0,.4);z-index:2;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+.mvis{height:180px;display:flex;align-items:center;justify-content:center;font-size:5.5rem;position:relative;overflow:hidden;}
+.mvis::after{content:'';position:absolute;inset:0;background:inherit;opacity:.25;}
+.mv1{background:linear-gradient(135deg,#FF8F00,#FFCC02);}
+.mv2{background:linear-gradient(135deg,#FF6F00,#FF8A65);}
+.mv3{background:linear-gradient(135deg,#2E7D32,#AED581);}
+.mv4{background:linear-gradient(135deg,#C62828,#FF8A80);}
+.mv5{background:linear-gradient(135deg,#00838F,#80DEEA);}
+.mv6{background:linear-gradient(135deg,#558B2F,#DCEDC8);}
+.mv7{background:linear-gradient(135deg,#E65100,#FFAB40);}
+.memi{position:relative;z-index:1;animation:wiggle 3s ease-in-out infinite;}
+@keyframes wiggle{0%,100%{transform:rotate(-5deg) scale(1);}50%{transform:rotate(5deg) scale(1.1);}}
+.mcard:nth-child(odd) .memi{animation-delay:.5s;}
+.mbody{padding:1.3rem;}
+.mname{font-family:'Fredoka One',cursive;font-size:1.25rem;color:var(--dark);margin-bottom:.3rem;}
+.mhindi{font-family:'Noto Sans Devanagari',sans-serif;font-size:.9rem;color:var(--gm);margin-bottom:.6rem;}
+.mdesc{font-size:.82rem;color:var(--tm);line-height:1.7;}
+.mprice{margin-top:.9rem;display:flex;align-items:center;justify-content:space-between;}
+.ptag{font-family:'Fredoka One',cursive;font-size:1.05rem;color:var(--green);background:var(--ls);padding:4px 14px;border-radius:100px;}
+.obtn{background:var(--green);color:#fff;border:none;border-radius:100px;padding:6px 16px;font-family:'Baloo 2',cursive;font-size:.78rem;font-weight:700;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none;}
+.obtn:hover{background:var(--gm);transform:scale(1.05);}
+.quotes-section{background:linear-gradient(160deg,#E8F5E9,#F1F8E9,#FFFDE7);}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.8rem;max-width:1100px;margin:0 auto;}
+.qcard{background:var(--white);border-radius:18px;padding:2rem;box-shadow:0 4px 20px rgba(46,125,50,.1);border-top:4px solid var(--gl);position:relative;transition:transform .3s;}
+.qcard:nth-child(2n){border-top-color:var(--or);}
+.qcard:nth-child(3n){border-top-color:var(--pink);}
+.qcard:hover{transform:translateY(-6px) rotate(.5deg);}
+.qi{font-size:2rem;margin-bottom:.8rem;display:block;}
+.qcard p{font-family:'Noto Sans Devanagari',sans-serif;font-size:.98rem;color:var(--text);line-height:1.8;margin-bottom:.8rem;}
+.qeng{font-family:'Baloo 2',cursive;font-size:.8rem;color:var(--tm);font-style:italic;}
+.about-section{background:var(--white);}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1050px;margin:0 auto;}
+.avis{border-radius:24px;overflow:hidden;background:linear-gradient(145deg,#1B5E20,#388E3C,#66BB6A);height:440px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;box-shadow:0 30px 80px rgba(46,125,50,.3);}
+.abf{font-size:7rem;animation:ib 3s ease-in-out infinite;}
+.afr{display:flex;gap:1rem;font-size:2.5rem;}
+.afr span{animation:wiggle 2s ease-in-out infinite;}
+.afr span:nth-child(2){animation-delay:.3s;}
+.afr span:nth-child(3){animation-delay:.6s;}
+.afr span:nth-child(4){animation-delay:.9s;}
+.stag{background:rgba(0,0,0,.3);color:#fff;padding:10px 20px;border-radius:100px;font-size:.85rem;font-weight:600;}
+.alist{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.9rem;}
+.alist li{display:flex;align-items:flex-start;gap:.8rem;font-size:.9rem;color:var(--tm);line-height:1.6;}
+.alist li .ic{font-size:1.2rem;flex-shrink:0;margin-top:1px;}
+.reviews-section{background:linear-gradient(160deg,#FFFDE7,#F1F8E9);}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.8rem;max-width:1100px;margin:0 auto;}
+.rcard{background:var(--white);border-radius:18px;padding:1.8rem;box-shadow:0 4px 20px rgba(46,125,50,.08);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;}
+.rcard::before{content:'"';position:absolute;top:-10px;right:16px;font-size:7rem;color:rgba(46,125,50,.07);font-family:Georgia,serif;line-height:1;}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(46,125,50,.15);}
+.rstars{color:var(--ol);font-size:1.1rem;letter-spacing:2px;margin-bottom:.8rem;}
+.rtxt{font-size:.88rem;color:var(--tm);line-height:1.8;margin-bottom:1.2rem;position:relative;z-index:1;}
+.revwr{display:flex;align-items:center;gap:.8rem;}
+.rav{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.1rem;color:#fff;flex-shrink:0;}
+.ra1{background:linear-gradient(135deg,#E53935,#FF7043);}
+.ra2{background:linear-gradient(135deg,#8E24AA,#CE93D8);}
+.ra3{background:linear-gradient(135deg,#00838F,#80DEEA);}
+.ra4{background:linear-gradient(135deg,#2E7D32,#AED581);}
+.ra5{background:linear-gradient(135deg,#F57C00,#FFCC02);}
+.ra6{background:linear-gradient(135deg,#C62828,#FF8A80);}
+.rname{font-weight:700;font-size:.9rem;color:var(--dark);}
+.rloc{font-size:.75rem;color:var(--tm);}
+.ltag{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:100px;background:var(--ls);color:var(--green);font-weight:700;margin-bottom:.5rem;letter-spacing:.05em;text-transform:uppercase;}
+.contact-section{background:linear-gradient(145deg,#0d2b0e,#1B5E20,#2E7D32);text-align:center;padding:90px 5%;position:relative;overflow:hidden;}
+.contact-section::before{content:'🌿';position:absolute;font-size:20rem;opacity:.04;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.contact-section .stitle{color:#fff;}
+.contact-section .slabel{color:var(--lime);}
+.cdesc{max-width:520px;margin:0 auto 2rem;color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.7;}
+.cchips{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2.5rem;}
+.chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;padding:10px 22px;border-radius:100px;font-size:.88rem;display:flex;align-items:center;gap:.5rem;}
+.cbtns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+.float-cta{position:fixed;bottom:1.8rem;right:1.8rem;z-index:300;display:flex;flex-direction:column;gap:.8rem;align-items:flex-end;}
+.fbtn{display:flex;align-items:center;gap:.6rem;padding:13px 20px;border-radius:100px;font-family:'Baloo 2',cursive;font-size:.85rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .2s;white-space:nowrap;}
+.fbtn:hover{transform:scale(1.06);}
+.fwa{background:linear-gradient(135deg,#25D366,#128C7E);}
+.fcall{background:linear-gradient(135deg,var(--or),var(--red));}
+footer{background:var(--dark);color:rgba(255,255,255,.6);text-align:center;padding:1.8rem;font-size:.82rem;letter-spacing:.04em;}
+footer strong{color:var(--lime);}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@keyframes bc2{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+@media(max-width:768px){
+  .agrid{grid-template-columns:1fr;gap:2.5rem;}
+  .nls{display:none;}
+  .fbtn .fl{display:none;}
+  .fbtn{padding:14px;border-radius:50%;}
+  .pgrid{grid-template-columns:repeat(2,1fr);}
+  .pcard:first-child{grid-column:span 2;}
+}
+</style>
+</head>
+<body>
+<div class="bubbles-bg" id="bubblesC"></div>
+
+<div class="float-cta">
+  <a href="https://wa.me/919760349370?text=Hello%20Sachin%20Juice%20Corner!%20Mujhe%20juice%20order%20karna%20hai." class="fbtn fwa" target="_blank"><span>💬</span><span class="fl">WhatsApp Order</span></a>
+  <a href="tel:+919760349370" class="fbtn fcall"><span>📞</span><span class="fl">Call Now</span></a>
+</div>
+
+<nav>
+  <div class="nl">🍹 Sachin <span>Juice Corner</span></div>
+  <ul class="nls">
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Order</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="splat s1"></div><div class="splat s2"></div><div class="splat s3"></div><div class="splat s4"></div>
+  <div class="ff" style="top:10%;left:5%;font-size:2rem;animation-duration:4s;">🍋</div>
+  <div class="ff" style="top:20%;right:8%;font-size:2.5rem;animation-duration:5s;animation-delay:1s;">🍉</div>
+  <div class="ff" style="bottom:25%;left:8%;font-size:2rem;animation-duration:3.5s;animation-delay:.5s;">🥭</div>
+  <div class="ff" style="bottom:15%;right:12%;font-size:3rem;animation-duration:6s;animation-delay:2s;">🍊</div>
+  <div class="ff" style="top:50%;left:3%;font-size:1.8rem;animation-duration:4.5s;animation-delay:1.5s;">🍇</div>
+  <div class="ff" style="top:60%;right:5%;font-size:2rem;animation-duration:5.5s;animation-delay:.8s;">🥥</div>
+  <div class="hc">
+    <div class="hbadge">🌿 100% Fresh · No Preservatives · Daily Made</div>
+    <span class="hicon">🍹</span>
+    <h1 class="htitle"><span class="g">Sachin Kashyap</span><br><span class="o">Fruit Juice Corner</span></h1>
+    <p class="htag">ताज़गी का असली स्वाद — हर घूंट में ताज़े फलों का जादू!</p>
+    <p class="hsub">📍 Putha Road, Vedvyaspuri, Meerut &nbsp;|&nbsp; 🚴 Home Delivery Available</p>
+    <div class="hpills">
+      <span class="pill">🥭 Mixed Fruit Chaat</span>
+      <span class="pill best">🥥 Papita Nariyal Shake ⭐ Best Seller</span>
+      <span class="pill">🍋 Fresh Lime Juice</span>
+      <span class="pill">💰 Reasonable Price</span>
+      <span class="pill hot">🚴 Home Delivery</span>
+    </div>
+    <div class="hbtns">
+      <a href="#menu" class="btn btn-menu">🍹 View Full Menu</a>
+      <a href="https://wa.me/919760349370?text=Hello!%20Order%20karna%20hai." class="btn btn-wa" target="_blank">💬 WhatsApp Order</a>
+      <a href="tel:+919760349370" class="btn btn-call">📞 Call Now</a>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);font-size:.75rem;text-align:center;animation:bc2 2s infinite;">↓ Scroll</div>
+</section>
+
+<div class="dstrip">
+  <span>🚴 Home Delivery Available</span>
+  <span>🌿 100% Fresh Fruits</span>
+  <span>💰 Best Prices in Meerut</span>
+  <span>📞 9760349370</span>
+  <span>⏰ Open Daily · 8 AM – 10 PM</span>
+</div>
+
+<section class="photos-section" id="photos">
+  <div style="text-align:center;" class="reveal">
+    <span class="slabel" style="color:var(--lime);">📸 Our Fresh Offerings</span>
+    <h2 class="stitle" style="color:#fff;">Seedha Baag Se, Aapke Glass Tak</h2>
+    <div class="divider c"></div>
+  </div>
+  <div class="pgrid reveal">
+    <div class="pcard ph1"><div class="pinner"><div class="pfruit">🥥🍌</div><div class="plabel">Papita Nariyal Shake ⭐</div></div></div>
+    <div class="pcard ph2"><div class="pinner"><div class="pfruit">🥭</div><div class="plabel">Mixed Fruit Chaat</div></div></div>
+    <div class="pcard ph3"><div class="pinner"><div class="pfruit">🍋</div><div class="plabel">Fresh Lime Juice</div></div></div>
+    <div class="pcard ph4"><div class="pinner"><div class="pfruit">🍉</div><div class="plabel">Watermelon Juice</div></div></div>
+    <div class="pcard ph5"><div class="pinner"><div class="pfruit">🥭</div><div class="plabel">Mango Shake</div></div></div>
+    <div class="pcard ph6"><div class="pinner"><div class="pfruit">🍇</div><div class="plabel">Grape Juice</div></div></div>
+    <div class="pcard ph7"><div class="pinner"><div class="pfruit">🍊🍋🥝</div><div class="plabel">Seasonal Fruits</div></div></div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div style="text-align:center;" class="reveal">
+    <span class="slabel">🍓 Our Specialties</span>
+    <h2 class="stitle">Taaza Juice, Taaza Zindagi!</h2>
+    <div class="divider c"></div>
+  </div>
+  <div class="mgrid">
+    <div class="mcard reveal"><span class="bbest">⭐ Best Seller</span>
+      <div class="mvis mv2"><span class="memi">🥥</span></div>
+      <div class="mbody"><div class="mname">Papita Nariyal Shake</div><div class="mhindi">पपीता नारियल शेक</div>
+      <p class="mdesc">Our signature bestseller! Creamy blend of ripe papaya and fresh coconut — thick, chilled and absolutely divine.</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Papita%20Nariyal%20Shake%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.1s">
+      <div class="mvis mv1"><span class="memi">🥭</span></div>
+      <div class="mbody"><div class="mname">Mixed Fruit Chaat</div><div class="mhindi">मिक्स्ड फ्रूट चाट</div>
+      <p class="mdesc">Seasonal fruits tossed with chaat masala, black salt and lime — tangy, sweet, spicy and refreshing!</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Mixed%20Fruit%20Chaat%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.2s">
+      <div class="mvis mv3"><span class="memi">🍋</span></div>
+      <div class="mbody"><div class="mname">Fresh Lime Juice</div><div class="mhindi">ताज़ा नींबू पानी</div>
+      <p class="mdesc">Freshly squeezed lemons with mint and black salt — the ultimate thirst quencher for Meerut's blazing summers!</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Lime%20Juice%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.3s">
+      <div class="mvis" style="height:180px;display:flex;align-items:center;justify-content:center;font-size:5.5rem;position:relative;overflow:hidden;background:linear-gradient(135deg,#FF6F00,#FFD740);"><span class="memi">🥭</span></div>
+      <div class="mbody"><div class="mname">Mango Shake</div><div class="mhindi">आम का शेक</div>
+      <p class="mdesc">Pure Dussehri mango blended with chilled milk — king of fruits, king of shakes. Thick and irresistible!</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Mango%20Shake%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.4s">
+      <div class="mvis mv4"><span class="memi">🍉</span></div>
+      <div class="mbody"><div class="mname">Watermelon Juice</div><div class="mhindi">तरबूज़ का रस</div>
+      <p class="mdesc">Chilled, pulpy watermelon with mint and black salt — like a cool breeze on a scorching summer afternoon.</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Watermelon%20Juice%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.5s">
+      <div class="mvis mv6"><span class="memi">🍵</span></div>
+      <div class="mbody"><div class="mname">Sugarcane Juice</div><div class="mhindi">गन्ने का रस</div>
+      <p class="mdesc">Freshly pressed sugarcane with ginger and lemon — the original desi energy drink, served ice cold.</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Sugarcane%20Juice%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.6s">
+      <div class="mvis mv5"><span class="memi">🥤</span></div>
+      <div class="mbody"><div class="mname">Cold Coffee</div><div class="mhindi">कोल्ड कॉफ़ी</div>
+      <p class="mdesc">Rich, frothy cold coffee blended with chilled milk and ice cream — the perfect pick-me-up any time!</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Cold%20Coffee%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+    <div class="mcard reveal" style="transition-delay:.7s">
+      <div class="mvis mv7"><span class="memi">🍊</span></div>
+      <div class="mbody"><div class="mname">Orange Juice</div><div class="mhindi">संतरे का रस</div>
+      <p class="mdesc">Vitamin C packed fresh orange juice squeezed right before your eyes — tangy, sweet, energising!</p>
+      <div class="mprice"><span class="ptag">💰 Best Price</span><a href="https://wa.me/919760349370?text=Orange%20Juice%20chahiye!" class="obtn" target="_blank">Order 🛒</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes-section">
+  <div style="text-align:center;" class="reveal">
+    <span class="slabel">💬 Dil Se Baatein</span>
+    <h2 class="stitle">Sachin Ji Kehte Hain…</h2>
+    <div class="divider c"></div>
+  </div>
+  <div class="qgrid">
+    <div class="qcard reveal"><span class="qi">🌿</span><p>"जब ताज़े फलों का रस हो हाथ में, तो गर्मी भी लगती है वरदान समान।"</p><div class="qeng">When fresh fruit juice is in hand, even the summer heat feels like a blessing.</div></div>
+    <div class="qcard reveal" style="transition-delay:.1s"><span class="qi">🥭</span><p>"मेरठ की गर्मी और Sachin का जूस — ये जोड़ी तो बनी ही एक दूसरे के लिए है!"</p><div class="qeng">Meerut's heat and Sachin's juice — this pair was truly made for each other!</div></div>
+    <div class="qcard reveal" style="transition-delay:.2s"><span class="qi">💪</span><p>"हर घूंट में ताज़गी, हर बूँद में सेहत — यही है हमारा वादा आपसे।"</p><div class="qeng">Freshness in every sip, health in every drop — this is our promise to you.</div></div>
+    <div class="qcard reveal" style="transition-delay:.3s"><span class="qi">🏠</span><p>"घर बैठे मँगवाओ, ताज़ा जूस पाओ — आपकी ताज़गी हमारी ज़िम्मेदारी है।"</p><div class="qeng">Order from home, get fresh juice — your freshness is our responsibility.</div></div>
+    <div class="qcard reveal" style="transition-delay:.4s"><span class="qi">🍋</span><p>"नींबू पानी हो या मिक्स्ड फ्रूट चाट — सबसे कम दाम, सबसे ज़्यादा स्वाद।"</p><div class="qeng">Lime juice or mixed fruit chaat — lowest price, highest taste.</div></div>
+    <div class="qcard reveal" style="transition-delay:.5s"><span class="qi">❤️</span><p>"पपीता नारियल शेक पीके देखो एक बार — फिर दूसरी कोई जगह याद ना आए।"</p><div class="qeng">Try the Papita Nariyal Shake just once — you won't think of anywhere else!</div></div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="agrid">
+    <div class="avis reveal">
+      <span class="abf">🍹</span>
+      <div class="afr"><span>🥭</span><span>🥥</span><span>🍋</span><span>🍊</span></div>
+      <div class="stag">📍 Putha Road, Vedvyaspuri, Meerut</div>
+    </div>
+    <div class="reveal" style="transition-delay:.2s">
+      <span class="slabel">🌿 Hamare Baare Mein</span>
+      <h2 class="stitle">Sachin Kashyap Fruit Juice Corner</h2>
+      <div class="divider"></div>
+      <p style="color:var(--tm);font-size:.92rem;line-height:1.8;margin-bottom:1rem;">Meerut ke dil mein, Vedvyaspuri ke Putha Road par, Sachin Kashyap apni juice ki dukaan chalate hain — jahan har glass mein hoti hai taazgi, sachhaai aur ek desi pyaar.</p>
+      <p style="color:var(--tm);font-size:.92rem;line-height:1.8;">Our mission: give Meerut the freshest, most affordable fruit drinks — made with real fruit, no artificial flavours, served with a smile by Sachin ji himself.</p>
+      <ul class="alist">
+        <li><span class="ic">🌿</span>100% natural fruits — no artificial flavours or colours</li>
+        <li><span class="ic">💰</span>Most affordable prices in Meerut — quality guaranteed</li>
+        <li><span class="ic">🚴</span>Fast home delivery across Vedvyaspuri &amp; nearby areas</li>
+        <li><span class="ic">⏰</span>Open daily from 8 AM to 10 PM</li>
+        <li><span class="ic">🧊</span>Hygienically prepared and served chilled fresh</li>
+        <li><span class="ic">🎁</span>Bulk orders for events, parties &amp; offices welcome</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div style="text-align:center;" class="reveal">
+    <span class="slabel">⭐ Customer Love</span>
+    <h2 class="stitle">Log Kya Kehte Hain!</h2>
+    <div class="divider c"></div>
+  </div>
+  <div class="rgrid">
+    <div class="rcard reveal"><span class="ltag">Hindi</span><div class="rstars">★★★★★</div><p class="rtxt">"Bhai, ye papita nariyal shake ekdum jadui hai! Maine Meerut mein itna achha shake kahin nahi piya. Sachin bhai ke haath ka swad aur rate bhi dum dar. Roz subah yahan se lena hota hai!"</p><div class="revwr"><div class="rav ra1">R</div><div><div class="rname">Rahul Verma</div><div class="rloc">📍 Vedvyaspuri, Meerut</div></div></div></div>
+    <div class="rcard reveal" style="transition-delay:.1s"><span class="ltag">English</span><div class="rstars">★★★★★</div><p class="rtxt">"Got the Mixed Fruit Chaat delivered at home and it was absolutely fresh! The masala was perfectly balanced — tangy, sweet and spicy. Sachin ji's home delivery is super quick. Highly recommended!"</p><div class="revwr"><div class="rav ra2">P</div><div><div class="rname">Priya Sharma</div><div class="rloc">📍 Putha Road, Meerut</div></div></div></div>
+    <div class="rcard reveal" style="transition-delay:.2s"><span class="ltag">Hindi</span><div class="rstars">★★★★★</div><p class="rtxt">"Garmi mein Sachin bhai ka nimboo paani peeke hi relief milti hai! Rate itna kam hai ki yakeen nahi hota. Bilkul taaze nimboo nikalke banate hain. Poore mohalle waale yahan aate hain!"</p><div class="revwr"><div class="rav ra3">M</div><div><div class="rname">Manoj Kumar</div><div class="rloc">📍 Meerut City</div></div></div></div>
+    <div class="rcard reveal" style="transition-delay:.3s"><span class="ltag">English</span><div class="rstars">★★★★★</div><p class="rtxt">"Best juice shop in Vedvyaspuri! The mango shake is outstanding — thick, rich, no water added. Prices are very reasonable and Sachin ji is always so friendly and welcoming. Love this place!"</p><div class="revwr"><div class="rav ra4">S</div><div><div class="rname">Sonal Gupta</div><div class="rloc">📍 Meerut</div></div></div></div>
+    <div class="rcard reveal" style="transition-delay:.4s"><span class="ltag">Hindi</span><div class="rstars">★★★★★</div><p class="rtxt">"Office party ke liye 40 glass ka bulk order diya — samay pe mila, bilkul fresh tha, sabne tarif ki. Sachin bhai ne bahut achha kiya! Aage bhi yahan se hi lunga."</p><div class="revwr"><div class="rav ra5">A</div><div><div class="rname">Amit Saxena</div><div class="rloc">📍 Vedvyaspuri, Meerut</div></div></div></div>
+    <div class="rcard reveal" style="transition-delay:.5s"><span class="ltag">English</span><div class="rstars">★★★★★</div><p class="rtxt">"Watermelon juice here is a lifesaver in Meerut summers! So chilled, so fresh, so affordable. WhatsApp ordering is super convenient — order from home and it arrives fast. 10 on 10!"</p><div class="revwr"><div class="rav ra6">N</div><div><div class="rname">Neha Agarwal</div><div class="rloc">📍 Meerut</div></div></div></div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="reveal"><span class="slabel">📞 Abhi Order Karo!</span><h2 class="stitle">Ghar Baithe Mangwaao Taaza Juice!</h2></div>
+  <p class="cdesc reveal">Call ya WhatsApp karo aur Meerut ki sabse taazi, sabse sasti juice apne ghar pe paao. Sachin bhai always happy to serve!</p>
+  <div class="cchips reveal">
+    <div class="chip">📞 +91 97603 49370</div>
+    <div class="chip">🏪 Sachin Kashyap</div>
+    <div class="chip">📍 Putha Road, Vedvyaspuri, Meerut</div>
+    <div class="chip">⏰ 8 AM – 10 PM Daily</div>
+    <div class="chip">🚴 Home Delivery Available</div>
+  </div>
+  <div class="cbtns reveal">
+    <a href="https://wa.me/919760349370?text=Hello%20Sachin%20bhai!%20Mujhe%20juice%20order%20karna%20hai." class="btn btn-wa" target="_blank">💬 WhatsApp Order</a>
+    <a href="tel:+919760349370" class="btn btn-call">📞 Call: 9760349370</a>
+  </div>
+</section>
+
+<footer>
+  <p>🍹 <strong>Sachin Kashyap Fruit Juice Corner</strong> — Putha Road, Vedvyaspuri, Meerut</p>
+  <p style="margin-top:.4rem;">📞 <strong>9760349370</strong> &nbsp;|&nbsp; Made with ❤️ and 100% fresh fruits</p>
+</footer>
+
+<script>
+const bc=document.getElementById('bubblesC');
+const cols=['#2E7D32','#66BB6A','#AEEA00','#F57C00','#FFB300','#E91E63','#00BCD4'];
+for(let i=0;i<18;i++){
+  const b=document.createElement('div');b.className='bubble';
+  const sz=30+Math.random()*120;
+  b.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;background:'+cols[Math.floor(Math.random()*cols.length)]+';animation-duration:'+(8+Math.random()*12)+'s;animation-delay:'+(Math.random()*10)+'s;';
+  bc.appendChild(b);
+}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
